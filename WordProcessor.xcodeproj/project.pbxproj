@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B56EF164183668CC00FA84D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56EF163183668CC00FA84D0 /* main.cpp */; };
-		B56EF166183668CC00FA84D0 /* WordProcessor.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B56EF165183668CC00FA84D0 /* WordProcessor.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				B56EF166183668CC00FA84D0 /* WordProcessor.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -27,7 +25,6 @@
 /* Begin PBXFileReference section */
 		B56EF160183668CC00FA84D0 /* WordProcessor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WordProcessor; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EF163183668CC00FA84D0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		B56EF165183668CC00FA84D0 /* WordProcessor.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = WordProcessor.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				B56EF163183668CC00FA84D0 /* main.cpp */,
-				B56EF165183668CC00FA84D0 /* WordProcessor.1 */,
 			);
 			path = WordProcessor;
 			sourceTree = "<group>";
