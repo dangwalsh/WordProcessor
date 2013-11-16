@@ -5,7 +5,7 @@
 //  Created by Daniel Walsh on 11/15/13.
 //  Copyright (c) 2013 Daniel Walsh. All rights reserved.
 //
-#define MICROSOFT
+//#define MICROSOFT
 #define _DEBUG
 #define MAX 5
 
@@ -32,9 +32,10 @@ int main()
 	size_t count = 0;
 
 	cout << "Begin typing:\n";
-	
+	getline(cin, phrase);
 	while (count < MAX) {
 		getline(cin, phrase);
+        if (phrase == "#") break;
 		processor.push_back(phrase);
 		++count;
 	}
@@ -42,46 +43,60 @@ int main()
 	print();
 
 	cout << "Enter a command:\n";
-	char comm; int start; int end;  int target;  string str;
-	while (cin >> comm){
-		
+	char comm; int start, end, target;  string str; string entry;
+	while (1) {
+        cout << "Enter a command: ";
+        getline(cin, entry);
+        comm = entry[0];
 		switch(comm) {
-		case 'I':
-			cout << "Insert phrase: "; cin >> str;
-			cout << "At line: "; cin >> start;
-			insertLine(start, str);
-			break;
-		case 'A':
-			cout << "Append phrase: " << endl; cin >> str;
-			appendLine(str);
-			break;
-		case 'M':
-			cout << "Move lines: " << endl; cin >> start;
-			cout << "Through: " << endl; cin >> end;
-			cout << "To line: " << endl; cin >> target;
-			moveLine(start, end, target);
-			break;
-		case 'F':
-			cout << "Find: " << endl; cin >> str;
-			findLine(str);
-			break;
-		case 'D':
-			cout << "Delete line: "; cin >> start;
-			deleteLine(start);
-			break;
-		case 'Q':
-			cout << "Exiting..." << endl;
-			break;
-		default:
-			cout << "Command not supported!" << endl;
-			break;
+            case 'I':
+                cout << "At line: ";
+                getline(cin, entry);
+                start = atoi(entry.c_str());
+                cout << "Insert phrase:";
+                getline(cin, str);
+                insertLine(start, str);
+                break;
+            case 'A':
+                cout << "Append phrase: " << endl;
+                getline(cin, entry);
+                appendLine(entry);
+                break;
+            case 'M':
+                cout << "Move lines: " << endl;
+                getline(cin, entry);
+                start = atoi(entry.c_str());
+                cout << "Through: " << endl;
+                getline(cin, entry);
+                end = atoi(entry.c_str());
+                cout << "To line: " << endl;
+                getline(cin, entry);
+                target = atoi(entry.c_str());
+                moveLine(start, end, target);
+                break;
+            case 'F':
+                cout << "Find: " << endl;
+                getline(cin, entry);
+                findLine(entry);
+                break;
+            case 'D':
+                cout << "Delete line: ";
+                getline(cin, entry);
+                start = atoi(entry.c_str());
+                deleteLine(start);
+                break;
+            case 'Q':
+                cout << "Exiting..." << endl;
+                break;
+            default:
+                cout << "Command not supported!" << endl;
+                break;
 		}
 
 		if (comm == 'Q') break;
 #ifdef _DEBUG
 		print();
 #endif
-		cout << "Enter a command:" << endl;
 	}
 
 	sortLines();
