@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B54E66CD183813F800AC69D8 /* WordProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B54E66CB183813F800AC69D8 /* WordProcessor.cpp */; };
 		B56EF164183668CC00FA84D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56EF163183668CC00FA84D0 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B54E66CB183813F800AC69D8 /* WordProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WordProcessor.cpp; sourceTree = "<group>"; };
+		B54E66CC183813F800AC69D8 /* WordProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordProcessor.h; sourceTree = "<group>"; };
 		B56EF160183668CC00FA84D0 /* WordProcessor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WordProcessor; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EF163183668CC00FA84D0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				B56EF163183668CC00FA84D0 /* main.cpp */,
+				B54E66CB183813F800AC69D8 /* WordProcessor.cpp */,
+				B54E66CC183813F800AC69D8 /* WordProcessor.h */,
 			);
 			path = WordProcessor;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54E66CD183813F800AC69D8 /* WordProcessor.cpp in Sources */,
 				B56EF164183668CC00FA84D0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +227,7 @@
 				B56EF16B183668CC00FA84D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
