@@ -19,7 +19,7 @@ using namespace std;
 class WordProcessor {
     
 private:
-    list<string> processor;
+    list<string> _processor;
     
 public:
     // constructors
